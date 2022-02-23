@@ -59,9 +59,13 @@ async function play() {
       await page.$eval('#google-analytics-mb', (el) => el.dataset.value)
     );
     const data1 = data.substr(10);
-    const correct_answer_idx = data1.substr(0, data1.length - 10);
-    const options = await page.$$('.choice');
-    await options[correct_answer_idx].click();
+    const correct_answer = data1.substr(0, data1.length - 10);
+    if (!isNaN(Number(correct_answer))) {
+      const options = await page.$$('.choice');
+      await options[correct_answer].click();
+    } else {
+      correct_answer && (await page.type('#choice', correct_answer.slice(1)));
+    }
     return;
   }
 

@@ -115,7 +115,7 @@ const dstr = (a) => {
 };
 
 console.log(B4.decode('b3N0ZW50YXRpb3Vz'));
-let data = dstr('jI~<@Jb|WdTtjdKyAI_?mciyTITz');
+let data = dstr("kJf|oYH;TZfdl`TfmcbbT<H>TY_;@IDo`Cwmtmy");
 let data1 = data.substr(10);
 let correct_answer_idx = data1.substr(0, data1.length - 10);
 console.log(correct_answer_idx);

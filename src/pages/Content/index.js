@@ -64,10 +64,20 @@ function finishOther() {
     document.getElementById('google-analytics-mb')?.dataset.value
   );
   const data1 = data.substr(10);
-  const correct_answer_idx = data1.substr(0, data1.length - 10);
-  const options = document.getElementsByClassName('choice');
-  options.item(correct_answer_idx).click();
-  setTimeout(() => (working = false), 5000);
+  const correct_answer = data1.substr(0, data1.length - 10);
+  if (!isNaN(Number(correct_answer))) {
+    const options = document.getElementsByClassName('choice');
+    options.item(correct_answer).click();
+  } else {
+    const input = document.getElementById('choice');
+    input.focus();
+    input.value = correct_answer.slice(1);
+    const ev = document.createEvent('Event');
+    ev.initEvent('keypress');
+    ev.which = ev.keyCode = 13;
+    input.dispatchEvent(ev);
+  }
+  setTimeout(() => (working = false), 7500);
 }
 
 function finishWordSpell() {
@@ -82,7 +92,7 @@ function finishWordSpell() {
   ev.initEvent('keypress');
   ev.which = ev.keyCode = 13;
   input.dispatchEvent(ev);
-  setTimeout(() => (working = false), 5000);
+  setTimeout(() => (working = false), 7500);
 }
 
 function styleUp() {
