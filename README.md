@@ -1,3 +1,22 @@
-# Chrome Extension to automatically "do" membean work
+# Chrome Extension to automatically "do" Membean work
 
-bootstrapped with <https://github.com/lxieyang/chrome-extension-boilerplate-react>
+pretty simple - i am not responsible for any trouble you get in for using this. This extension does in fact bypass the anti-cheat that Membean has built into their system, but should not be used for cheating. This is for educational purposes only.
+
+## Installation instructions
+
+~~go to the releases tab and download the most recent one, then turn on developer mode in chrome and drop the .crx file into the window.~~
+
+since the chrome webstore is not being nice to me:
+
+```sh
+git clone https://github.com/JoeyEamigh/membean-destroyer.git
+cd membean-destroyer
+yarn
+yarn build
+```
+
+once you have built the extension, go to the extension page in chrome, turn on developer mode, hit load unpacked, then select the build folder.
+
+## Disclaimer again
+
+this is for educational purposes only. dont sue me.

@@ -13,8 +13,8 @@ export default function Popup() {
     chrome.storage.sync.get('enabled', (result) => setEnabled(result.enabled));
   }, []);
 
-  // if (!url.includes('membean.com')) return <NotOnMembean />;
-  // if (!url.includes('training_sessions')) return <NotOnTrainingSessions />;
+  if (!url.includes('membean.com')) return <NotOnMembean />;
+  if (!url.includes('training_sessions')) return <NotOnTrainingSessions />;
 
   return (
     <main>
