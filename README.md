@@ -4,9 +4,9 @@ pretty simple - i am not responsible for any trouble you get in for using this. 
 
 ## Installation instructions
 
-~~go to the releases tab and download the most recent one, then turn on developer mode in chrome and drop the .crx file into the window.~~
+go to the releases tab and download the most recent one, then turn on developer mode on chrome://extensions and drop the .crx file into the window.
 
-since the chrome webstore is not being nice to me:
+alternatively to build from source:
 
 ```sh
 git clone https://github.com/JoeyEamigh/membean-destroyer.git
